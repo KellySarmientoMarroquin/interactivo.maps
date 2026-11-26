@@ -663,7 +663,7 @@ function incluirRegistrosActivosGeneral() {
     const color_transito = categoria_transito === 'bajo' ? '#10b981' : (categoria_transito === 'medio' ? '#f59e0b' : (categoria_transito === 'alto' ? '#f97316' : '#ef4444'));
 
     dbGeneral.push({
-      codigo: `REG-${dbGeneral.length + 1:03d}`,
+      codigo: `REG-${dbGeneral.length + 1}`,
       estado: "NUEVO INGRESO ACTIVO",
       genero: "Masculino",
       edad: 18,
