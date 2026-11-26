@@ -722,7 +722,10 @@ function restaurarBaseGeneral() {
       document.querySelectorAll('.dim-pane').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.dim-btn').forEach(b => b.classList.remove('active'));
       document.getElementById(dimId).classList.add('active');
-      btnEl.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
+      requestAnimationFrame(() => {
+        renderizarTodasLasDimensiones();
+      });
     }
 
     function contarPorCampo(lista, campo) {
